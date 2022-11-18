@@ -7,7 +7,7 @@ variable "name" {
 variable "vpcs" {
   type = list(object({
     id                 = string
-    security_group_ids = list
+    security_group_ids = list(string)
   }))
   description = "(Optional) List of VPC IDs which will be create a VPC Endpoint"
 }
