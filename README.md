@@ -69,3 +69,11 @@ Por padrão o agente vem pré-instalado nas seguintes AMIs fornecidas pela AWS:
 - macOS 10.14.x e 10.15.x
 
 Mais detalhes sobre o serviço, consulta de logs do agente e atualizações, acesse a página da [documentação](https://docs.aws.amazon.com/systems-manager/latest/userguide/ssm-agent.html).
+
+## Usando como modulo
+
+```hcl
+    module "ssm_session_manager" {
+        source = "git::https://github.com/andremulin/aws-ssm-policy.git?ref=1.0.0"
+    }
+```
