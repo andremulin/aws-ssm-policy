@@ -4,8 +4,6 @@ resource "aws_iam_role" "ssm_ec2" {
   path = "/"
 
   assume_role_policy = data.aws_iam_policy_document.assume_role_policy_doc.json
-
-  tags = var.tags
 }
 
 # Create Policy
