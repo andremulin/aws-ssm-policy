@@ -10,8 +10,8 @@ variable "vpcs" {
     security_group_ids = list(string)
   }))
   description = "(Optional) List of VPC IDs which will be create a VPC Endpoint"
-  default = [ {
-    id = ""
-    security_group_ids = [ "" ]
-  } ]
+  default = [{
+    id                 = ""
+    security_group_ids = [""]
+  }]
 }

@@ -13,6 +13,10 @@ resource "aws_iam_policy" "ssm_ec2" {
 
   policy = data.aws_iam_policy_document.ssm_ec2.json
 }
+resource "aws_iam_role_policy_attachment" "ssm_managed_policy" {
+  role       = aws_iam_role.ssm_ec2.name
+  policy_arn = data.aws_iam_policy.ssm_managed_policy.arn
+}
 
 # Attachment policy
 resource "aws_iam_role_policy_attachment" "ssm_ec2" {
