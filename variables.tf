@@ -1,5 +1,13 @@
-variable name {
+variable "name" {
   type        = string
   description = "(Optional) A name used to create roles and policies"
-  default = ""
+  default     = ""
+}
+
+variable "vpcs" {
+  type = list(object({
+    id                 = string
+    security_group_ids = list
+  }))
+  description = "(Optional) List of VPC IDs which will be create a VPC Endpoint"
 }
